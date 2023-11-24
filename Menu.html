@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<style>
+    #menu{
+        background-color: rgba(205, 133, 63, 0.7);
+        font-size: 2.5em;
+        text-align: center;
+        width: 20%;
+        padding: 10px;
+        position: absolute;
+    }
+    aside{
+        background-color: rgb(139, 69, 19,0.9);
+        width: 20%;
+        padding-bottom: 0;
+        margin-top: 11px;
+        display: block;
+        float: left;
+    }
+    section{
+        background-color: rgb(160, 82, 45,0.7);
+        width: 80%;
+        margin-top: 11px;
+        padding: 10px;
+        float: left;
+    }
+    .parent {
+        display: flex;
+        align-items: stretch;
+    }
+    section, aside { flex-grow: 1;   }
+    .menu_selection{
+        background-color: transparent;
+        font-size: 1em;
+        width: 100%;
+        border: none;
+        border-bottom: 1px solid black;
+        padding: 15px 0;
+        cursor: pointer;
+    }
+    .menu_title{
+        display: flex;
+        font-size: 2em;
+        margin-top: 10px;        
+    }
+    .menu_item_title{
+        font-size: 1.5em;
+        display: inline-block;
+
+    }
+    .menu_item_price{
+        display: inline-block;
+        font-size: 1.5em;
+        position: absolute;
+        right: 10px;
+    }
+  
+    
+</style>
+    <link rel="stylesheet" href="CoffeeCafe.css">
+    <link rel="icon" type="image/png" href="coffee.jpeg" sizes="16x16">
+    <title>ElGato Coffee</title>
+</head>
+<body>
+<header>
+    <div id="ElGato">
+        <label style="color: orange; float: left; padding-left: 20px; ">El</label>
+        <label style="color: #FFF5EE;">Gato</label>               
+    </div>
+    <div id="navbar" style="text-align: right" >
+        <button id="buttonLogin" onclick="document.getElementById('popup_bg').style.display='inline-block'" >Login</button>
+        <a href="Index.html" target="_self"  >Home</a>
+        <div class="dropdown">
+            <button style="font-size: 21px; color: #E9DCC9; margin-right: 0px;">About Us</button>
+            <div class="option">
+                <a href="Enquiry.html" target="_self" style="font-size: 15px;" >Enquiry</a>
+                <a href="AbouUsHistory.html" target="_self" style="font-size: 15px;" >History</a>
+            </div>
+        </div>    
+        <a href="Menu.html" target="_self" >Menu</a>
+        <a href="OrderNow.html" target="_self" style=" display: inline;">Order Now</a>
+    </div>
+</header>
+<main class="parent">
+    
+    <aside>
+        <div id="menu">Menu</div>
+            <div class="menu_selection" style="margin-top: 70px;">
+                <button class="menu_selection" id="button_beans">Coffee Beans</button>
+                <button class="menu_selection" id="button_coffee">Coffee</button>
+                <button class="menu_selection" id="button_noncoffee">Non-coffee</button>
+                <button class="menu_selection" id="button_tea">Tea</button>
+                <button class="menu_selection" id="button_frappe">Frappé</button>
+                <button class="menu_selection" id="button_chocolate_drink">Chocolate Drinks</button>
+                <button class="menu_selection" id="button_pastries">Pastries</button>
+            </div>
+        </div>
+    </aside>
+    <section>
+        <div style="margin-top: 0px;">
+            <div id="menu_beans" style="display: block;">
+                <p class="menu_title">Coffee Beans</p> 
+            </div>
+            <div id="menu_coffee" style="display: none;">
+                <p class="menu_title">Coffee</p>
+            </div>
+
+            <div id="menu_noncoffee" style="display: none;">
+                <p class="menu_title">Non-coffee</p>
+            </div>
+
+            <div id="menu_tea" style="display: none;">
+                <p class="menu_title">Tea</p>
+            </div>
+
+            <div id="menu_frappe" style="display: none;">
+                <p class="menu_title">Frappé</p>
+            </div>
+
+            <div id="menu_chocolate" style="display: none;">
+                <p class="menu_title">Chocolate Drinks</p>
+            </div>
+
+            <div id="menu_pastries" style="display: none;">
+                <p class="menu_title">Pastries</p>
+            </div>
+        </div>
+    </section>
+
+    <div id="popup_bg">
+        <div id="popup_main_div">
+            <p id="popup_title">Log In</p>
+            <p id="popup_close" onclick="document.getElementById('popup_bg').style.display='none'">x</p>
+            <div id="popup_form">
+                <form action="CoffeeCafe.html" method="POST">
+                    <label for="username">Username:</label><br>
+                    <input type="text" name="username" id="username" placeholder="Enter your username" required><br><br>
+                    <label for="password">Password:</label><br>
+                    <input type="password" name="password" id="password" placeholder="Enter your password" required><br><br>
+                    <div id="popup_button">
+                        <button type="submit" style="margin-right: 27px;">Login</button>
+                        <a href="signup.html" target="_blank" id="signup" >Sign up</a>
+                </form>                         
+            </div>
+        </div>
+    </div>
+
+    <script src="ShopJS.js"></script>
+</main>
+</body>
+</html>
