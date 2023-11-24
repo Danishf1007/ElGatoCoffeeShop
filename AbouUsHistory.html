@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<style>
+#main_text{
+    background-color: black;
+    color: #E9DCC9;
+    margin: 8% 100px 0px 100px;
+    padding: 0px 20px 15px 20px;
+    border-radius: 5px;
+    opacity: 0.7;
+    display: inline-block;
+}
+</style>
+    <link rel="stylesheet" href="CoffeeCafe.css">
+    <link rel="icon" type="image/png" href="coffee.jpeg" sizes="16x16">
+    <title>El Gato Cafe History</title>
+</head>
+<body>
+    <header>
+        <div id="ElGato">
+            <label style="color: orange; float: left; padding-left: 20px; ">El</label>
+            <label style="color: #FFF5EE;">Gato</label>            
+        </div>
+        <div id="navbar" style="text-align: right" >
+            <button id="buttonLogin" onclick="document.getElementById('popup_bg').style.display='inline-block'" >Login</button>
+            <a href="Index.html" target="_self"  >Home</a>
+            <div class="dropdown">
+                <button style="font-size: 21px; color: #E9DCC9; margin-right: 0px;">About Us</button>
+                <div class="option">
+                    <a href="Enquiry.html" target="_self" style="font-size: 15px;" >Enquiry</a>
+                    <a href="AbouUsHistory.html" target="_self" style="font-size: 15px;" >History</a>
+                </div>
+            </div>    
+            <a href="Menu.html" target="_self" >Menu</a>
+            <a href="OrderNow.html" target="_self" style=" display: inline;">Order Now</a>
+        </div>
+    </header>
+<main>
+    <div id="main_text">
+        <h1>History</h1>
+        <p>El Gato Cafe was founded in 2020 by a group of friends who wanted to share their love of coffee with the world. 
+            The name El Gato was chosen because it is the name of the cat of one of the founders. 
+            The cat is a black cat with a white spot on its chest. 
+            The cat is named El Gato because it is a cat and it is black. 
+            The cat is also named El Gato because it is a cat and it is black. 
+            The cat is also named El Gato because it is a cat and it is black. 
+            The cat is also named El Gato because it is a cat and it is black. 
+            The cat is also named El Gato because it is a cat and it is black. 
+            The cat is also named El Gato because it is a cat and it is black. 
+            The cat is also named El Gato because it is a cat and it is black. 
+            The cat is also named El Gato because it is a cat and it is black. 
+            The cat is also named El Gato because it is a cat and it is black. 
+        </p>
+    </div>
+    <div id="popup_bg">
+        <div id="popup_main_div">
+            <p id="popup_title">Log In</p>
+            <p id="popup_close" onclick="document.getElementById('popup_bg').style.display='none'">x</p>
+            <div id="popup_form">
+                <form action="CoffeeCafe.html" method="POST">
+                    <label for="username">Username:</label><br>
+                    <input type="text" name="username" id="username" placeholder="Enter your username" required><br><br>
+                    <label for="password">Password:</label><br>
+                    <input type="password" name="password" id="password" placeholder="Enter your password" required><br><br>
+                    <div id="popup_button">
+                        <button type="submit" style="margin-right: 27px;">Login</button>
+                        <button id="buttonSignup" >Sign up</button>
+                    </div>
+                </form>                         
+            </div>
+        </div>
+    </div>
+</body>
+</html>
